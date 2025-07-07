@@ -2,22 +2,22 @@
 import random
 
 def guess_number():
-    number_to_guess = random.randint(1, 100)
+    num = random.randint(1, 100)
     attempts = 0
 
-    print("1부터 100 사이의 숫자를 맞춰보세요!")
+    print("1부터 100 사이의 숫자를 맞춰보세요")
 
     while True:
         
-        user_guess = int(input("숫자를 입력하세요: "))
+        me = int(input("숫자를 입력하세요: "))
         attempts += 1
         
-        if user_guess < number_to_guess:
-                print("너무 작아요!")
-        elif user_guess > number_to_guess:
-                print("너무 커요!")
+        if me < num:
+                print("더 커야 합니다")
+        elif me > num:
+                print("더 작아야합니다")
         else:
-            print(f"정답입니다! {attempts}번 만에 맞췄어요!")
+            print("정답! %d 번 만에 맞췄습니다." %attempts)
             break
         
 
